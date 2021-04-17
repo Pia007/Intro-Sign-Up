@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --primary-red: hsl(0, 100%, 74%);     
+    --primary-green: hsl(154, 59%, 51%);
+    --accent-blue: hsl(248, 32%, 49%);
+    --neutral-dark-blue: hsl(249, 10%, 26%); 
+    --neutral-grayish-blue: hsl(246, 25%, 77%);
+    --box-red: hsl(1, 52%, 60%);
+    --white: hsl(255, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --blue-at: hsl(228, 45%, 44%);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--poppins);
+    color: var(--white);
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for 1440px */
+.background {
+    min-height: 80vh;
+    max-width: 1440px;
+    background: var(--primary-red);
+    background-image: url(images/bg-intro-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+}
+
+.intro h1 {
+    font-size: 2.756em;
+    font-weight: 700;
+    margin-left: 10vw;
+    margin-right: 3vw;
+    padding-top: 3vw;
+    margin-top: 18vw;
+    line-height: 1.1;
+}
+
+.intro p {
+    font-size: 1em;
+    font-weight: 500;
+    margin-left: 10vw;
+    line-height: 1.6;
+    width: 35vw;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    height: 66vh;
+    width: 47vw;
+    margin-top: 8vw; 
+    margin-left: 5vw;
+    margin-right: 12vw;  
+}
+.fee h2 {
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+    height: 3vw;
+    padding-top: 1.3vw;
+    vertical-align: center;
+    background: var(--accent-blue);
+    border-radius: 8px; 
+    box-shadow: 0 6px 1px 0 var(--box-red);
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    height: 42vh;
+    background-color: var(--white);
+    margin-top: 1vw;
+    border: none;
+    border-radius: 8px;
+    padding-top: 1.5vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 1vw;
+    box-shadow: 0 6px 1px 0 var(--box-red);
+} 
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+ }
+
+label { 
+    display: flex;
+    align-items: center;
+    font-size: 5em;  
+}
+
+.form-field {
+    padding-top: 1.5vw;
+    align-items: center;
+}
+
+::placeholder {
+    padding-left: 1.5vw;
+    font-family: var(--poppins);
+    font-weight: 600;
+    color: var(--black);
+}
+
+.data {
+    display: block;
+    width: 100%;
+    height: 4.6vh;
+    border: 1px groove hsla(0, 5%, 81%, 0.637);
+    border-radius: 4px;
+}
+.submit-button {
+    height: 5vh;
+    width: 100%;
+    color: var(--white);
+    font-weight: 600;
+    background: var(--primary-green);
+    border: 2px solid hsla(154, 55%, 43%, 0.513);
+    border-radius: 4px;
+    text-shadow: 2px 2px 1px var(--neutral-grayish-blue); 
+    box-shadow: 0 2px 1px 1px var(--primary-green);
+}
+
+.submit-button:hover {
+    background: var(--accent-blue);
+    transform: translateY(-1px);
+}
+.note { 
+    font-size: .676em;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 1.2vh;
+    color: hsla(0, 4%, 81%, 0.87);
+}
+span > strong {
+   color:hsl(0, 100%, 74%) 
+}
+
+/* Frontend Mentor Credit */
+footer{
+    background-color:hsla(0, 11%, 76%, 0.637);
+    width: 100%;
+}
+
+
+.attribution {
+    color: var(--black);
+    margin-top: 1em;
+    font-size: .875em;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 0;
+}
+.attribution a {
+    color: var(--blue-at);
+}
+
+/*  Styling for mobile device */
+@media screen and (max-width: 375px) {
+    
+    .background {
+        min-height: 100vh;
+        width: 100%;
+        background-image: url(images/bg-intro-mobile.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .container {
+        margin-top: 1.5vh;
+        margin-left: 3vw;
+        margin-right: 6vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .intro {
+        margin: 0 2vw 0 2vw;
+        padding: 0;
+    }
+    .intro h1 {
+        font-size: 1.575em;
+        font-weight: 700;
+        text-align: center;
+        margin-left: 2vw;
+        line-height: 1.35;
+    }
+    .intro p {
+        margin-right:0 2vw 0 2vw;
+        font-size: .885em;
+        text-align: center;
+        margin-left: 2vw;
+        width: auto;
+        padding: 0;
+        
+    }
+    .right-side {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        margin-top: 8vw; 
+        margin-left: 3vw;
+        margin-right: 3vw; 
+    }
+    .fee h2 {
+        font-size: .775em;
+        font-weight: 400;
+        text-align: center;
+        height: 18vw;
+        padding-top: 5vw;
+        padding-right: 15vw;
+        padding-left: 15vw;
+        line-height: 1.75;    
+    }
+    .window {
+        height: auto;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+        border: none;
+        padding: 6vw;
+    } 
+    .form-field {
+        padding-top: 5vw;
+    }
+    ::placeholder {
+        padding-left: 3.5vw;
+        font-size: .9em;
+        font-weight: 600;
+        color: var(--black);
+    }   
+}
