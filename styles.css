@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* Setting variables*/
 :root {
     --poppins: 'Poppins', sans-serif;
     --fs-reg: 1rem;
@@ -10,7 +9,6 @@
     --fw-med: 600;
     --fw-bold: 700;
     
-    --primary-red: hsla(0, 100%, 74%, .96);
     --primary-green: hsl(154, 59%, 51%);
     --accent-blue: hsl(248, 32%, 49%);
     --neutral-dark-blue: hsl(249, 10%, 26%); 
@@ -19,10 +17,11 @@
     --white: hsl(255, 100%, 100%);
     --black: hsl(0, 0%, 0%);
     --blue-at: hsl(228, 45%, 44%);
-    
+    --primary-red: hsla(0, 100%, 74%, .96);
     --corners: .5rem;
     --corners-data: .3rem;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -43,6 +42,7 @@ html,
 body {
     height: 100%;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -60,7 +60,9 @@ body {
     position: relative;
 }
 
+
 /* Styling for 1440px */
+
 .container {
     display: flex;
     flex-direction: row;
@@ -76,6 +78,7 @@ body {
     margin-top: 11rem;
     margin-right: 2.5rem;
 }
+
 .intro h1 {
     font-size: calc(var(--fs-lg)*1.25);
     font-weight: var(--fw-bold);
@@ -125,25 +128,22 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: var(--corners-data);
- }
+}
 label { 
     display: flex;
     align-items: center;
     font-size: 5rem;  
 }
-
 .form-field {
     padding-top: 1.2rem;
     align-items: center;
 }
-
 ::placeholder {
     padding-left: 1.5rem;
     font-family: var(--poppins);
     font-weight: var(--fw-med);
     color: var(--black);
 }
-
 .data {
     display: block;
     width: 100%;
@@ -155,7 +155,7 @@ label {
     height: 3rem;
     width: 100%;
     color: var(--white);
-    font-weight: var(--fw-med);
+    font-weight: var(--fw-med);;
     background: var(--primary-green);
     border: .125rem solid hsla(154, 55%, 43%, 0.513);
     border-radius: var(--corners-data);
@@ -176,7 +176,7 @@ label {
 span > strong {
    color:hsl(0, 100%, 74%); 
 }
-footer{
+footer {
     background-color:hsla(0, 11%, 76%, 0.637);
     width: 100%;
     position: fixed;
@@ -195,7 +195,7 @@ footer{
     color: var(--blue-at);
 }
 
-/*  Styling for mobile device - max-width 450px*/
+/*  Styling for mobile device  max-width 450px*/
 @media screen and (max-width: 28.125em) {
     body {
         height: auto;
@@ -209,7 +209,8 @@ footer{
         margin: 4rem;
         align-items: center;
         justify-content: center;
-        text-align: center;   
+        text-align: center;
+        
     }
     .intro {
         width: 100%;
@@ -217,6 +218,7 @@ footer{
         display: flex;
         flex-direction: column;
         margin: 0rem 5rem 1rem 5rem;
+
     }
     .intro h1 {
         width: 100%;
@@ -225,6 +227,7 @@ footer{
         padding-bottom: 1rem;
         text-align: center;
         line-height: 1.35;
+        
     }
     .intro p {
         margin: 0;
@@ -361,7 +364,8 @@ footer{
     .intro h1 {
         width: 100%;
         font-size: calc(var(--fs-lg)*1.2);
-        margin-top: 0; 
+        margin-top: 0;
+        
     }
     .intro p {
         width: 100%;
@@ -409,6 +413,7 @@ footer{
         width: 100%;
         font-size: calc(var(--fs-lg)*1.2);
         margin-top: 0;
+        
     }
     .intro p {
         width: 100%;
@@ -428,6 +433,7 @@ footer{
         padding: 1.5rem;
         line-height: 1.5;    
     }
+    
     .note {
         font-size: .8125rem;
     } 
