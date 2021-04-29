@@ -80,15 +80,6 @@ body {
     line-height: 1.6;
 }
 .right-side {
-    display: flex;
-    flex-direction: column;
-    height: 66vh;
-    width: 47vw;
-    margin-top: 8vw; 
-    margin-left: 5vw;
-    margin-right: 12vw;  
-}
-.right-side {
     width: 48%;
     height: 100%;
     display: flex;
@@ -156,7 +147,7 @@ label {
     height: 3rem;
     width: 100%;
     color: var(--white);
-    font-weight: var(--fw-med);;
+    font-weight: var(--fw-med);
     background: var(--primary-green);
     border: .125rem solid hsla(154, 55%, 43%, 0.513);
     border-radius: var(--corners-data);
@@ -165,17 +156,17 @@ label {
 }
 .submit-button:hover {
     background: var(--accent-blue);
-    transform: translateY(-.0625rem;
+    transform: translateY(-.0625rem);
 }
 .note { 
     font-size: .676rem;
-    font-weight: var(--fw-norm);;
+    font-weight: var(--fw-norm);
     text-align: center;
     padding-top: 1.2rem;
     color: hsla(0, 4%, 81%, 0.87);
 }
 span > strong {
-   color:hsl(0, 100%, 74%) 
+   color:hsl(0, 100%, 74%); 
 }
 footer{
     background-color:hsla(0, 11%, 76%, 0.637);
@@ -210,8 +201,7 @@ footer{
         margin: 4rem;
         align-items: center;
         justify-content: center;
-        text-align: center;
-        
+        text-align: center;   
     }
     .intro {
         width: 100%;
@@ -219,7 +209,6 @@ footer{
         display: flex;
         flex-direction: column;
         margin: 0rem 5rem 1rem 5rem;
-
     }
     .intro h1 {
         width: 100%;
@@ -228,7 +217,6 @@ footer{
         padding-bottom: 1rem;
         text-align: center;
         line-height: 1.35;
-        
     }
     .intro p {
         margin: 0;
@@ -270,7 +258,7 @@ footer{
     ::placeholder {
         padding-left: 1rem;
         font-size: .625rem;
-        font-weight: 600;
+        font-weight: var(--fw-med);
         color: var(--black);
     }
     .submit-button {
