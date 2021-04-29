@@ -68,6 +68,14 @@ body {
     height: auto;
     margin: 9rem 10rem;
 }
+.intro {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 11rem;
+    margin-right: 2.5rem;
+}
 .intro h1 {
     font-size: calc(var(--fs-lg)*1.25);
     font-weight: var(--fw-bold);
