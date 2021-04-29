@@ -179,7 +179,7 @@ span > strong {
 footer {
     background-color:hsla(0, 11%, 76%, 0.637);
     width: 100%;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     height: 1.5rem;
     font-size: var(--font-sm);
