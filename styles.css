@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+/* Setting variables*/
 :root {
     --poppins: 'Poppins', sans-serif;
-    --primary-red: hsl(0, 100%, 74%);     
+    --fs-reg: 1rem;
+    --fs-lg: 2.5rem;
+    --fw-sm: 400;
+    --fw-norm: 500;
+    --fw-med: 600;
+    --fw-bold: 700;
+    
+    --primary-red: hsla(0, 100%, 74%, .96);
     --primary-green: hsl(154, 59%, 51%);
     --accent-blue: hsl(248, 32%, 49%);
     --neutral-dark-blue: hsl(249, 10%, 26%); 
@@ -11,61 +19,66 @@
     --white: hsl(255, 100%, 100%);
     --black: hsl(0, 0%, 0%);
     --blue-at: hsl(228, 45%, 44%);
+    
+    --corners: .5rem;
+    --corners-data: .3rem;
 }
-
-body {
-    padding: 0;
+* {
     margin: 0;
-    box-sizing: border-box;
-    font-family: var(--poppins);
-    color: var(--white);
+    padding: 0;
 }
 
-main {
-    min-height: 100vh;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--fs-reg);
+    position: relative;
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
     display: flex;
     flex-direction: column;
     flex-wrap: column;
     align-items: center;
     justify-content: center;
-}
-
-/* Styling for 1440px */
-.background {
-    min-height: 80vh;
-    max-width: 1440px;
-    background: var(--primary-red);
+    width: 100%;
+    height: 100%;
+    font-family: var(--poppins);
+    color: var(--white);
     background-image: url(images/bg-intro-desktop.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-color:  hsla(0, 100%, 74%, .96);
     position: relative;
 }
 
+/* Styling for 1440px */
 .container {
     display: flex;
     flex-direction: row;
-    width: auto;
+    max-width: 90rem;
     height: auto;
+    margin: 9rem 10rem;
 }
-
 .intro h1 {
-    font-size: 2.756em;
-    font-weight: 700;
-    margin-left: 10vw;
-    margin-right: 3vw;
-    padding-top: 3vw;
-    margin-top: 18vw;
-    line-height: 1.1;
+    font-size: calc(var(--fs-lg)*1.25);
+    font-weight: var(--fw-bold);
+    padding-bottom: 2rem;
+    line-height: 1;
 }
-
 .intro p {
-    font-size: 1em;
-    font-weight: 500;
-    margin-left: 10vw;
+    font-size: 1rem;
+    font-weight: var(--fw-norm);
     line-height: 1.6;
-    width: 35vw;
 }
-
 .right-side {
     display: flex;
     flex-direction: column;
@@ -75,191 +88,351 @@ main {
     margin-left: 5vw;
     margin-right: 12vw;  
 }
-.fee h2 {
-    font-size: 1em;
-    font-weight: 400;
-    text-align: center;
-    height: 3vw;
-    padding-top: 1.3vw;
-    vertical-align: center;
-    background: var(--accent-blue);
-    border-radius: 8px; 
-    box-shadow: 0 6px 1px 0 var(--box-red);
+.right-side {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;        
 }
-
+.fee,
+.window {
+    width: 100%;
+    margin: .75rem 0rem .5rem 0rem;
+}
+.fee h2 {
+    height: 3.5rem;
+    font-size: 1em;
+    font-weight: var(--fw-sm);
+    text-align: center;
+    padding-top: 1rem;
+    background: var(--accent-blue);
+    border-radius: var(--corners); 
+    box-shadow: 0 .375rem .0625rem 0 var(--box-red);
+}
 .window {
     display: flex;
     flex-direction: column;
-    height: 42vh;
+    height: 100%;
     background-color: var(--white);
-    margin-top: 1vw;
     border: none;
-    border-radius: 8px;
-    padding-top: 1.5vw;
-    padding-left: 3vw;
-    padding-right: 3vw;
-    padding-bottom: 1vw;
-    box-shadow: 0 6px 1px 0 var(--box-red);
+    border-radius: var(--corners);
+    padding: 1.125rem 2.2rem 2.5rem 2.2rem;
+    box-shadow: 0 .375rem .0625rem 0  var(--box-red);
 } 
-
 .sign-up {
     display: flex;
     flex-direction: column;
-    height: 60vh;
+    height: 100%;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
+    border-radius: var(--corners-data);
  }
-
 label { 
     display: flex;
     align-items: center;
-    font-size: 5em;  
+    font-size: 5rem;  
 }
 
 .form-field {
-    padding-top: 1.5vw;
+    padding-top: 1.2rem;
     align-items: center;
 }
 
 ::placeholder {
-    padding-left: 1.5vw;
+    padding-left: 1.5rem;
     font-family: var(--poppins);
-    font-weight: 600;
+    font-weight: var(--fw-med);
     color: var(--black);
 }
 
 .data {
     display: block;
     width: 100%;
-    height: 4.6vh;
-    border: 1px groove hsla(0, 5%, 81%, 0.637);
-    border-radius: 4px;
+    height: 3.5rem;
+    border: .06125rem solid var(--neutral-grayish-blue);
+    border-radius: var(--corners-data);
 }
 .submit-button {
-    height: 5vh;
+    height: 3rem;
     width: 100%;
     color: var(--white);
-    font-weight: 600;
+    font-weight: var(--fw-med);;
     background: var(--primary-green);
-    border: 2px solid hsla(154, 55%, 43%, 0.513);
-    border-radius: 4px;
-    text-shadow: 2px 2px 1px var(--neutral-grayish-blue); 
-    box-shadow: 0 2px 1px 1px var(--primary-green);
+    border: .125rem solid hsla(154, 55%, 43%, 0.513);
+    border-radius: var(--corners-data);
+    text-shadow: .125rem .125rem .0625rem var(--neutral-grayish-blue); 
+    box-shadow: 0 .125rem .0625rem .0625rem var(--primary-green);
 }
-
 .submit-button:hover {
     background: var(--accent-blue);
-    transform: translateY(-1px);
+    transform: translateY(-.0625rem;
 }
 .note { 
-    font-size: .676em;
-    font-weight: 500;
+    font-size: .676rem;
+    font-weight: var(--fw-norm);;
     text-align: center;
-    padding-top: 1.2vh;
+    padding-top: 1.2rem;
     color: hsla(0, 4%, 81%, 0.87);
 }
 span > strong {
    color:hsl(0, 100%, 74%) 
 }
-
-/* Frontend Mentor Credit */
 footer{
     background-color:hsla(0, 11%, 76%, 0.637);
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 1.5rem;
+    font-size: var(--font-sm);
+    text-align: center;   
 }
-
-
 .attribution {
     color: var(--black);
-    margin-top: 1em;
     font-size: .875em;
-    text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: .0625rem;
     margin: 0;
 }
 .attribution a {
     color: var(--blue-at);
 }
 
-/*  Styling for mobile device */
-@media screen and (max-width: 375px) {
-    
-    .background {
-        min-height: 100vh;
+/*  Styling for mobile device - max-width 450px*/
+@media screen and (max-width: 28.125em) {
+    body {
+        height: auto;
         width: 100%;
-        background-image: url(images/bg-intro-mobile.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: top;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
     }
-    
     .container {
-        margin-top: 1.5vh;
-        margin-left: 3vw;
-        margin-right: 6vw;
         display: flex;
+        flex-direction: column;
+        width: 94%;
+        height: auto;
+        margin: 4rem;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
+        text-align: center;
+        
     }
-
     .intro {
-        margin: 0 2vw 0 2vw;
-        padding: 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 0rem 5rem 1rem 5rem;
+
     }
     .intro h1 {
-        font-size: 1.575em;
-        font-weight: 700;
+        width: 100%;
+        font-size: 1.5rem;
+        margin: 0;
+        padding-bottom: 1rem;
         text-align: center;
-        margin-left: 2vw;
         line-height: 1.35;
+        
     }
     .intro p {
-        margin-right:0 2vw 0 2vw;
-        font-size: .885em;
+        margin: 0;
+        font-size: var(--fw-sm);
+        font-weight: var(--fw-norm);
         text-align: center;
-        margin-left: 2vw;
-        width: auto;
-        padding: 0;
-        
+        padding-bottom: 1.5rem; 
+        line-height: 1.5; 
     }
     .right-side {
         display: flex;
         flex-direction: column;
         height: auto;
         width: auto;
-        margin-top: 8vw; 
-        margin-left: 3vw;
-        margin-right: 3vw; 
+        margin: 0 .75rem;
     }
     .fee h2 {
-        font-size: .775em;
-        font-weight: 400;
+        font-size: .6875rem;
+        font-weight: var(--fw-norm);
         text-align: center;
-        height: 18vw;
-        padding-top: 5vw;
-        padding-right: 15vw;
-        padding-left: 15vw;
+        height: 4rem;
+        padding: 1rem 3rem;
         line-height: 1.75;    
     }
     .window {
         height: auto;
-        margin-top: 3vw;
-        margin-bottom: 3vw;
+        width: auto;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
         border: none;
-        padding: 6vw;
+        padding: .5rem 1.25rem;
     } 
     .form-field {
-        padding-top: 5vw;
+        padding-top: .75rem;
+    }
+    .data {
+        height: 3rem;
     }
     ::placeholder {
-        padding-left: 3.5vw;
-        font-size: .9em;
+        padding-left: 1rem;
+        font-size: .625rem;
         font-weight: 600;
         color: var(--black);
+    }
+    .submit-button {
+        height: 2.75rem;
+        font-size: .75rem;
+    }
+    .note {
+        padding-top: .5rem;
+        font-size: .4375rem;
+    }
+    footer {
+        width: 100%;
+        height: auto;
+        bottom: 1rem;
+        position: fixed;
+    }
+    .attribution {
+        font-size: .625rem;
     }   
+}
+
+
+@media screen  and (min-width: 28.1875em) and (max-width: 48em) {
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .intro {
+        width: 90%;
+        margin: .75rem 5rem;
+    
+    }
+    .intro h1 {
+        width: 100%;
+        font-size: var(--fs-lg);
+        
+    }
+    .intro p {
+        width: 100%;
+        font-size: var(--fs-reg);
+        padding-bottom: 2rem;
+    }
+    .right-side {
+        width: 100%;
+        margin: 0 .75rem;
+    }
+    .fee h2 {
+        font-size: 1rem;
+        height: 5rem;
+        padding: 1.5rem;
+        line-height: 1.5;    
+    }
+    .window {
+        margin: 1rem 0;
+        padding: 1rem 1.5rem;
+    }
+    .note {
+        font-size: .625rem;
+    } 
+}
+/* Screen size range 769px tp 1024px */
+@media screen and (min-width: 48.06em) and (max-width: 64em )  {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+        height: auto;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+    }
+    .intro {
+        width: 100%;
+        height: auto;
+        padding-top: 0;
+        margin: 2rem 4rem;
+    }
+    .intro h1 {
+        width: 100%;
+        font-size: calc(var(--fs-lg)*1.2);
+        margin-top: 0; 
+    }
+    .intro p {
+        width: 100%;
+        font-size: calc(var(--fs-reg)*1.2);
+        margin-right: 0;
+        padding:0;
+        padding-bottom: 3rem;
+        text-align: center;
+    }
+    .right-side {
+        width: 100%;
+        margin: 0rem 1rem 5rem 1rem;
+    }
+    .fee h2 {
+        font-size: var(--fs-reg);
+        height: 5rem;
+        padding: 1.5rem;
+        line-height: 1.5;    
+    }
+    .note {
+        font-size: .8125rem;
+    } 
+}
+
+/* Screen size range 1025px tp 1439px */
+@media screen and (min-width: 64.06em) and (max-width: 89.9375em )  {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 40rem;
+        height: auto;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+    }
+    .intro {
+        width: 100%;
+        height: auto;
+        padding-top: 0;
+        margin: 2rem 4rem;
+    }
+    .intro h1 {
+        width: 100%;
+        font-size: calc(var(--fs-lg)*1.2);
+        margin-top: 0;
+    }
+    .intro p {
+        width: 100%;
+        font-size: calc(var(--fs-reg)*1.2);
+        margin-right: 0;
+        padding:0;
+        padding-bottom: 3rem;
+        text-align: center;
+    }
+    .right-side {
+        width: 100%;
+        margin: 0rem 1rem 5rem 1rem;
+    }
+    .fee h2 {
+        font-size: var(--fs-reg);
+        height: 5rem;
+        padding: 1.5rem;
+        line-height: 1.5;    
+    }
+    .note {
+        font-size: .8125rem;
+    } 
 }
